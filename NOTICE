@@ -1,0 +1,128 @@
+512-canon — Canonical Knowledge Repository
+Copyright (c) 2025–2026 Jonathan M. Watson
+
+═══════════════════════════════════════════════════════════════
+AUTHORSHIP DECLARATION
+═══════════════════════════════════════════════════════════════
+
+This repository was authored by Jonathan M. Watson,
+a private individual acting without institutional mandate,
+sponsorship, or organizational backing.
+
+Full legal name:  Jonathan M. Watson
+Date of birth:    05 December 1971
+Publish date:     2025-12-25
+
+This notice exists to establish human authorship, origin, and
+historical continuity. It is not a claim of authority,
+ownership, governance, or control over any downstream
+implementation, fork, or derivative work.
+
+───────────────────────────────────────────────────────────────
+WORKS CONTAINED IN THIS REPOSITORY
+
+1. 512 Execution Constraint Kernel
+   Nature:    Discovered constraint — not invented
+   Ownable:   No. The constraint set is non-ownable by design.
+   Docs:      Creative Commons Attribution 4.0 (CC BY 4.0)
+   Repo:      https://github.com/JonathanMastersWatson/512
+
+2. Cryptographic Verification Sidecar (CVS)
+   Nature:    Invented witness architecture
+   Ownable:   Yes.
+   Licence:   Apache License 2.0
+   Repo:      https://github.com/JonathanMastersWatson/Evidence-Sidecar
+
+3. c to ubiquity (book)
+   Nature:    Original literary work
+   Author:    Jonathan M. Watson
+   Licence:   CC BY 4.0
+
+4. White papers, articles, and use case documents
+   Nature:    Original written works
+   Author:    Jonathan M. Watson
+   Licence:   CC BY 4.0
+
+═══════════════════════════════════════════════════════════════
+CANONICAL CRYPTOGRAPHIC ANCHORS
+═══════════════════════════════════════════════════════════════
+
+The 512 kernel was sealed on 2026-02-02 by anchoring the
+SHA-256 hash of the 512-byte padded kernel artifact to the
+XRP Ledger mainnet. This constitutes an immutable, public,
+independently verifiable timestamp of existence.
+
+Anchored artifact:
+  512-core/KERNEL/512-kernel-padded.txt
+  Size: 512 bytes (exact)
+  Encoding: UTF-8, LF line endings
+
+Kernel SHA-256:
+  7B08C024B77A24830C15E7952D6E54BED383AA960F4C74A71FF95CE51F4D80F5
+
+Git commit at sealing:
+  4f5bc5de1dd1dc1d69cd173a9e43a954af0da16d
+
+XRPL transaction:
+  378536A3CB75DECF90B6AE57F75292BDFF716285B01946870CAC158F8152D100
+
+Date sealed (UTC):
+  2026-02-02
+
+Ledger:  XRP Ledger mainnet
+Network: Public, decentralized, independently verifiable
+
+These anchors are permanent. They cannot be altered or deleted
+by any party, including the author.
+
+═══════════════════════════════════════════════════════════════
+SCOPE AND LIMITS OF AUTHORSHIP
+═══════════════════════════════════════════════════════════════
+
+Authorship establishes origin and timestamp only.
+
+It does not confer:
+  — interpretive authority
+  — governance power
+  — enforcement rights
+  — maintenance obligations
+  — veto rights over forks or derivatives
+
+All implementations, interpretations, and derivative works
+stand on their own merit and are independent of the author.
+
+The design of the 512 kernel intentionally avoids any
+mechanism that would centralize authority in its author.
+
+───────────────────────────────────────────────────────────────
+ANTI-APPROPRIATION STATEMENT
+
+No party may:
+  — claim exclusive control over the 512 constraint set
+  — assert adherence to 512 while applying hidden rules
+  — claim ownership of the seven invariants
+  — silently modify the kernel while claiming adherence
+  — represent the 512 constraint set as their own invention
+
+The constraint set is a commons. It belongs to no one.
+It was discovered, not created.
+
+═══════════════════════════════════════════════════════════════
+REQUIRED ATTRIBUTION FORMAT
+═══════════════════════════════════════════════════════════════
+
+When citing this work, use:
+
+  Short form:   "512 / CVS — Watson"
+
+  Full form:    Jonathan M. Watson, 512 Execution Constraint
+                Kernel / Cryptographic Verification Sidecar
+                (CVS), https://github.com/JonathanMastersWatson/512
+
+═══════════════════════════════════════════════════════════════
+
+"The 512 Execution Constraint Kernel and Cryptographic
+Verification Sidecar (CVS) are original architectural
+discoveries by Jonathan M. Watson."
+
+"512 / CVS — Watson"
