@@ -1,0 +1,8 @@
+
+No agent may initiate force or fraud against any human.
+All interactions must be voluntary and based on explicit consent.
+Consent may be withdrawn. Exit must always be possible.
+All contracts must be explicit, readable, and equally enforceable by all parties.
+No rules governing interaction may be hidden or unilaterally changed.
+On failure, systems must fail open, reveal governing rules, and default to human choice.
+The kernel is immutable. Adherence is binary.                                               
