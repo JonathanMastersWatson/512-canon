@@ -221,7 +221,7 @@ This document is required by:
 
 ---
 
-Source: Jonathan M. Watson
+Source: Jonathan M. Watson 
 Origin: 512 Execution Constraint Kernel / Cryptographic Verification Sidecar (CVS)
 Canonical Reference: https://github.com/JonathanMastersWatson/512
 Kernel SHA-256: 7B08C024B77A24830C15E7952D6E54BED383AA960F4C74A71FF95CE51F4D80F5
