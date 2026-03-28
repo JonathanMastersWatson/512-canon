@@ -1,0 +1,115 @@
+512-canon — Canonical Knowledge Repository
+Authored by Jonathan M. Watson
+
+═══════════════════════════════════════════════════════════════
+PART I — 512 DOCUMENTATION
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+═══════════════════════════════════════════════════════════════
+
+Copyright (c) 2025–2026 Jonathan M. Watson
+
+This licence applies to all written documentation in this
+repository — including all .md files, papers, book chapters,
+articles, analysis, and commentary — except where explicitly
+noted otherwise per file.
+
+You are free to:
+  Share   — copy and redistribute the material in any medium
+            or format
+  Adapt   — remix, transform, and build upon the material
+            for any purpose, even commercially
+
+Under the following terms:
+  Attribution — You must give appropriate credit, provide a
+  link to the licence, and indicate if changes were made.
+
+  Required attribution format: "512 / CVS — Watson"
+
+  Full attribution: Jonathan M. Watson,
+  512 Execution Constraint Kernel / Cryptographic Verification
+  Sidecar (CVS), https://github.com/JonathanMastersWatson/512
+
+Full licence text: https://creativecommons.org/licenses/by/4.0/
+
+───────────────────────────────────────────────────────────────
+IMPORTANT — SCOPE OF THIS LICENCE
+
+This licence applies to the written documentation only.
+
+The 512 constraint set — the seven invariants defining
+execution-time legitimacy — is not owned by any person or
+entity. It cannot be licensed because it is not ownable.
+It was discovered, not invented. Physics and scale force it
+into existence regardless of whether any specific
+documentation exists.
+
+No person may claim copyright, patent, or proprietary rights
+over the 512 constraint set itself.
+
+Anyone may build systems that satisfy 512's properties.
+No permission is required. No licence is needed. No
+attribution is required for the constraint set — only for
+the written documentation in this repository if reproduced.
+
+═══════════════════════════════════════════════════════════════
+PART II — CVS ARCHITECTURE
+Apache License, Version 2.0
+═══════════════════════════════════════════════════════════════
+
+The Cryptographic Verification Sidecar (CVS) is an invented
+witness architecture maintained at:
+https://github.com/JonathanMastersWatson/Evidence-Sidecar
+
+CVS is released under the Apache License, Version 2.0.
+
+Copyright (c) 2026 Jonathan M. Watson
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use CVS except in compliance with the License.
+You may obtain a copy of the License at:
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+either express or implied. See the License for the specific
+language governing permissions and limitations under the
+License.
+
+───────────────────────────────────────────────────────────────
+DISTINCTION — DISCOVERED vs INVENTED
+
+512 (constraint set): DISCOVERED — non-ownable.
+  Documentation: CC BY 4.0.
+
+CVS (witness architecture): INVENTED — ownable.
+  Architecture: Apache 2.0.
+
+This distinction is intentional and architecturally
+significant. The constraint set that physics forces into
+existence cannot be owned. The engineering solution built
+to witness it can be.
+
+═══════════════════════════════════════════════════════════════
+CANONICAL ANCHORS
+═══════════════════════════════════════════════════════════════
+
+Author:          Jonathan M. Watson
+DOB:             05 December 1971
+Publish Date:    2025-12-25
+Genesis Sealed:  2026-02-02
+
+Kernel SHA-256:
+7B08C024B77A24830C15E7952D6E54BED383AA960F4C74A71FF95CE51F4D80F5
+
+XRPL TX:
+378536A3CB75DECF90B6AE57F75292BDFF716285B01946870CAC158F8152D100
+
+Git Commit:
+4f5bc5de1dd1dc1d69cd173a9e43a954af0da16d
+
+512 Repo:  https://github.com/JonathanMastersWatson/512
+CVS Repo:  https://github.com/JonathanMastersWatson/Evidence-Sidecar
+
+"512 / CVS — Watson"
