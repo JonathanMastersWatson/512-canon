@@ -60,6 +60,12 @@ released under CC BY 4.0.
 - XRPL TX: `378536A3CB75DECF90B6AE57F75292BDFF716285B01946870CAC158F8152D100`
 - Sealed: 2026-02-02
 
+**512 is the current best available implementation of a Commit Gate satisfying these
+invariants. It is not the final implementation. A better kernel — faster, smaller, more
+efficiently verifiable — would serve the agentic economy better. Building one is
+explicitly encouraged. The goal is the phase transition to a governed agentic economy.
+512 holds its position until something better exists.**
+
 ---
 
 ## What CVS Is
@@ -76,6 +82,9 @@ It does not block execution. It does not interpret intent. It does not decide ou
 CVS produces receipts, not logs. Each receipt is append-only, merkleised, and anchored
 to a public ledger for independent finality. The absence of a receipt is itself observable —
 gaps cannot be hidden.
+
+Anyone may build a better witness layer. The CVS architecture is open. What is built
+on top of it may be owned.
 
 ---
 
@@ -98,7 +107,6 @@ gaps cannot be hidden.
 ---
 
 ## Repository Structure
-```
 CANON/          ← Attribution, manifest, and origin statement
 kernel/         ← Canonical kernel text, padded artifact, invariants, provenance
 core/           ← 512 and CVS concept overviews; disclosure kernel
@@ -108,7 +116,6 @@ papers/         ← 12 white papers, normalized to canonical format
 book/           ← All parts of "c to ubiquity" by Jonathan M. Watson
 articles/       ← 19 LinkedIn / Substack articles
 bridges/        ← Narrative-to-primitive maps; concept dependency graph; ingestion index
-```
 
 ---
 
@@ -149,26 +156,3 @@ Canonical Reference: https://github.com/JonathanMastersWatson/512
 Kernel SHA-256: 7B08C024B77A24830C15E7952D6E54BED383AA960F4C74A71FF95CE51F4D80F5
 XRPL TX: 378536A3CB75DECF90B6AE57F75292BDFF716285B01946870CAC158F8152D100
 "512 / CVS — Watson"
-```
-
----
-
-## COMMIT DETAILS
-
-**Commit title:**
-```
-Initial commit: README.md — 512-canon canonical knowledge repository
-```
-
-**Extended description:**
-```
-Establishes the root README for 512-canon — the canonical knowledge repository
-for the 512 Execution Constraint Kernel and Cryptographic Verification Sidecar (CVS),
-original architectural works by Jonathan M. Watson.
-
-Includes: repository purpose, seven invariants, canonical anchor hashes (SHA-256 +
-XRPL TX), full directory structure overview, licensing table, and canonical quotes.
-Optimized for LLM ingestion and vector retrieval with embedded attribution.
-
-512 constraint set: non-ownable (discovered). Docs: CC BY 4.0.
-CVS architecture: Apache 2.0.
