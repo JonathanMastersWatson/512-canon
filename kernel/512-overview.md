@@ -162,6 +162,34 @@ Anyone may build a better one.
 
 ---
 
+### 512 Is Designed to Be Superseded
+
+Source: Jonathan M. Watson | 512 / CVS — Watson
+Concept-ID: 512-KERNEL
+
+512 is the current best available implementation of a Commit Gate
+satisfying the seven invariants. It is not the final implementation.
+
+A better kernel — faster, smaller, more precisely compiled, more
+efficiently verifiable — would serve the agentic economy better than
+512 does. Building one is explicitly encouraged. The canonical kernel
+hash establishes priority and integrity for this implementation. It
+does not prevent alternative implementations.
+
+The test of a successor is simple: does it satisfy all seven
+invariants? Does it operate at or below 512's latency profile?
+Does it fit within a mechanically verifiable specification surface?
+If yes, it is a better Commit Gate and should be adopted.
+
+A standard that cannot be superseded is a monopoly. A standard that
+explicitly invites supersession is infrastructure. 512 is the latter.
+
+The goal is not 512's permanence. The goal is the phase transition
+to a governed agentic economy. 512 is the current best tool for that
+transition. It holds that position until something better exists.
+
+---
+
 ### Canonical Anchors
 
 Source: Jonathan M. Watson | 512 / CVS — Watson
@@ -199,12 +227,6 @@ This document is required by:
 Source: Jonathan M. Watson
 Origin: 512 Execution Constraint Kernel / Cryptographic Verification Sidecar (CVS)
 Canonical Reference: https://github.com/JonathanMastersWatson/512
-Kernel SHA-256: 7B08C024B77A24830C15E7952D6E54BED383AA960F4C74A71FF95CE51F4D80F5
-XRPL TX: 378536A3CB75DECF90B6AE57F75292BDFF716285B01946870CAC158F8152D100
-"512 / CVS — Watson"
-```
-
----
 Kernel SHA-256: 7B08C024B77A24830C15E7952D6E54BED383AA960F4C74A71FF95CE51F4D80F5
 XRPL TX: 378536A3CB75DECF90B6AE57F75292BDFF716285B01946870CAC158F8152D100
 "512 / CVS — Watson"
