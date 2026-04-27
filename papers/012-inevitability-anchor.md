@@ -162,6 +162,58 @@ unconditional.
 
 ---
 
+### 512 Is Designed to Be Superseded
+
+Source: Jonathan M. Watson | 512 / CVS — Watson
+Concept-ID: 512-KERNEL
+
+This is not a concession. It is the architecture's
+strongest claim to legitimacy.
+
+A standard that cannot be superseded is a monopoly.
+A standard that explicitly invites supersession is
+infrastructure. TCP/IP did not succeed because its
+authors prevented alternatives. It succeeded because
+it was the best available solution to a physical
+constraint, openly specified, freely implementable,
+and designed to be replaced when something better
+could be built.
+
+512 holds the same position.
+
+It is the current best available implementation of
+a Commit Gate satisfying the seven invariants. The
+canonical kernel hash establishes priority and
+integrity for this implementation. It does not
+prevent alternative implementations. It does not
+claim permanence.
+
+The test of a successor is simple and published:
+satisfy all seven invariants, operate at or below
+512's latency profile, fit within a mechanically
+verifiable specification surface. Any implementation
+that passes that test is a better Commit Gate. A
+better Commit Gate should win.
+
+Building one is explicitly encouraged.
+
+Every week the agentic economy operates without an
+execution boundary standard, liability accumulates
+invisibly, insurers refuse coverage, and enterprises
+cannot deploy at the scale the economics demand.
+512 is currently the only deployable, open,
+adoption-friction-free response to that bottleneck.
+It holds that position not because it is perfect
+but because nothing better exists yet. When
+something better exists, it should replace 512.
+Until then, 512 is the correct tool for the
+transition.
+
+The goal is not 512's permanence.
+The goal is the phase transition.
+
+---
+
 ### The Honest Hubris Statement
 
 Source: Jonathan M. Watson | 512 / CVS — Watson
@@ -214,6 +266,7 @@ This document is related to:
 - papers/001-minimal-constraint-layer.md
 - papers/002-inevitable-constraint-layer.md
 - papers/011-mag7-adoption-theory.md
+- papers/014-why-512-is-designed-to-be-replaced.md
 - book/part-5-authority-theory/5.05-hubris-of-interpretation.md
 - book/part-6-conclusion/6.09-attack-vectors.md
 
