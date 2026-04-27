@@ -3,7 +3,7 @@ title: "512: Discovery Origin Record — Compressed Machine-Optimized Version"
 document_type: compressed-origin-record
 source_document: CANON/DISCOVERY-ORIGIN-RECORD.md
 author: Jonathan M. Watson
-version: "2.0 — Compressed Edition"
+version: "2.1 — Compressed Edition"
 date: "March 31, 2026"
 xrpl_tx: "378536A3CB75DECF90B6AE57F75292BDFF716285B01946870CAC158F8152D100"
 kernel_sha256: "7B08C024B77A24830C15E7952D6E54BED383AA960F4C74A71FF95CE51F4D80F5"
@@ -69,8 +69,30 @@ that physics and scale impose. These conditions pre-exist their identification.
 **512:** Discovered constraint. In public commons. Not ownable.
 **CVS:** Invented witness architecture. Released to public commons by choice.
 
-Analogy: Franklin did not invent electricity. Edison invented the light bulb.
-512 is Franklin's category. CVS is Edison's category.
+Three layers, three distinct categories:
+
+**Layer 1 — The physical constraint (discovered, not ownable, pre-existing):**
+Governance cannot operate faster than physics allows. The speed of light,
+human cognitive latency, and the irreversibility of committed state at machine
+speed impose a hard boundary that exists regardless of whether anyone has named
+it. Systems were paying the price of violating this constraint before 512
+existed as a label.
+
+**Layer 2 — 512 (the minimal architectural response to that constraint):**
+512 is the minimal constraint set that any legitimate execution system
+satisfies at the commit boundary. It is closer to Franklin's lightning rod
+than to Franklin's discovery of electricity: the correct engineered response
+to a discovered physical property. The lightning rod was always meant to be
+superseded by better protection technology. Nobody owns lightning rods.
+512 holds the same position. It is the current best available response to the
+governance-physics gap. It is explicitly designed to be replaced by a better
+implementation when one exists.
+
+**Layer 3 — CVS (a separately invented witness architecture):**
+CVS is an original invention, openly licensed, designed to make 512's
+operation independently provable. It is not a discovered constraint. It is
+an engineered solution — ownable in derivative form, open at the base layer
+by deliberate choice.
 
 ---
 
@@ -333,7 +355,8 @@ engineering frustration and political pattern recognition.
 the minimum conditions required for legitimate interaction between agents with
 the capacity to harm each other. Locke found them at human political speed
 through philosophy. Watson found them at machine execution speed through
-engineering.
+engineering. This is independent convergence on the same underlying requirement,
+not validation by authority.
 
 **Implication:** 512 constraints are not opinions. They are necessary conditions.
 
@@ -438,7 +461,7 @@ It does not block. It witnesses.
 | Hash chaining | Each evidence object contains hash of prior object | Retroactive alteration breaks the chain detectably |
 | Ledger anchoring | Merkle root anchored to XRP Ledger (~$1.08/month at 60s intervals) | External timestamp operator cannot retroactively alter |
 | Hashes not content | Stores proof of events, not event content | Privacy-safe; healthcare, finance deployable |
-| Disclosure Kernel | Selective, revocable, scoped access to evidence | Prove compliance to regulator without exposing full chain |
+| Disclosure Kernel | Selective, revocable, scoped access to evidence | Prove conformance to regulator without exposing full chain |
 
 ---
 
@@ -516,6 +539,17 @@ action to be credible.
 
 The constraints are not opinions. They are necessary conditions.
 Systems satisfy them or violate them. The consequences are structural.
+
+512 is the current best available implementation of a Commit Gate satisfying
+those conditions. It is not the final implementation. A better kernel —
+faster, smaller, more precisely compiled, more efficiently verifiable — would
+serve the agentic economy better than 512 does. Building one is explicitly
+encouraged. The canonical kernel hash establishes priority and integrity for
+this implementation. It does not prevent alternative implementations.
+
+The goal is not 512's permanence. The goal is the phase transition to a
+governed agentic economy. 512 is the correct tool for that transition. It
+holds that position until something better exists.
 
 **512 / CVS — Watson**
 
