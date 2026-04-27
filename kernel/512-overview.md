@@ -5,7 +5,7 @@ author: Jonathan M. Watson
 document_type: concept-overview
 canonical_ref: https://github.com/JonathanMastersWatson/512
 license: CC BY 4.0
-tags: [512-kernel, commit-gate, execution-boundary, machine-speed, agentic-ai, deterministic-constraint, physics, governance, invariants]
+tags: [512-kernel, commit-gate, execution-boundary, machine-speed, agentic-ai, deterministic-constraint, physics, governance, invariants, l1-cache, hitl, constraint-compilation]
 ---
 
 ## 512 EXECUTION CONSTRAINT KERNEL — Overview
@@ -66,6 +66,34 @@ consequence collapses below the threshold of human intervention.
 Governance mechanisms designed for human-speed execution do not
 slow down. They become structurally irrelevant.
 
+In 10 microseconds, light travels approximately 3 kilometres. This
+is the terminal bound on any governance mechanism that requires
+evaluation outside the execution substrate. A signal leaving an
+execution node to reach any external system and return cannot
+complete that round trip within the available window regardless of
+network quality or engineering optimization. The physics of signal
+propagation sets a hard floor on any off-node governance round trip.
+That floor is physical. No engineering closes it for sub-10-microsecond
+execution paths.
+
+The canonical 512 kernel is 512 bytes — the maximum specification
+surface consistent with complete mechanical verification. 512 bytes
+fits entirely within L1 CPU cache (typically 32 to 64 kilobytes per
+core). A cache-resident kernel is evaluated without a memory fetch,
+in nanoseconds, at no measurable cost to the execution cycle it governs.
+The kernel is not just fast relative to human review. It operates in
+the same physical time domain as the CPU operation it governs.
+
+Human-in-the-loop governance cannot operate at machine execution speed.
+The reason is not that humans are slow relative to an engineering metric
+that could be improved. The reason is that inserting a human into a CPU
+execution pipeline is a category error — architecturally incoherent, not
+merely operationally slow. "Slow" implies engineering could close the gap.
+"Category error" correctly identifies that no engineering closes the gap
+between human cognition and CPU execution cycles. Humans belong at the
+constraint definition stage, before execution. The compiled kernel
+enforces at the boundary. These are not the same function.
+
 > "Governance that activates after the commit is commentary.
 > Commentary is latency."
 > — Jonathan M. Watson
@@ -121,6 +149,43 @@ On failure, systems must fail open, reveal governing rules, and default to human
 The kernel is immutable. Adherence is binary.
 
 For precise definitions of each invariant see kernel/INVARIANTS.md.
+
+---
+
+### Constraint Computability
+
+Source: Jonathan M. Watson | 512 / CVS — Watson
+Concept-ID: 512-KERNEL
+
+The seven invariants are canonical intent — governance principles
+expressed in plain language. They are not directly machine-executable
+as written. Before deployment, each invariant must be compiled into
+domain-specific, machine-evaluable Boolean expressions by a Constraint
+Architect.
+
+Invariants differ in how directly they compile:
+
+| Invariant | Computability |
+|---|---|
+| I1 — No force or fraud | Compiled via proxy — fraud and coercion are not directly computable; proxies include authorization scope, declared consent records, and attested identity binding |
+| I2 — Voluntary interaction / explicit consent | Compiled via proxy — consent is a declared state; the gate evaluates whether a valid consent record exists at execution time |
+| I3 — Consent withdrawal and exit | Compiled via proxy — withdrawal status and exit availability are declared states queryable at execution time |
+| I4 — Contractual clarity | Compiled via proxy — contract existence, readability attestation, and equal enforceability are declared states; the gate evaluates attestation presence |
+| I5 — No hidden rules | Directly computable — the constraint set is either visible and declared or it is not; the gate evaluates its own specification surface |
+| I6 — Fail-open | Directly computable — the gate either fails open or it does not; this is a binary architectural property |
+| I7 — Immutability and binary satisfaction | Directly computable — the kernel hash either matches the canonical value or it does not |
+
+The gap between a policy statement and a compilable Boolean expression
+is the Constraint Architect's primary diagnostic output. Gaps are not
+failures — they are the locations where governance was previously
+accomplished through interpretation and must now be resolved through
+upstream system design before compilation is possible.
+
+The strength of the governance guarantee is a function of the accuracy
+of constraint compilation. Poorly compiled constraints produce precisely
+wrong enforcement. The invariants define what must be satisfied. The
+compiled expressions define what the gate actually evaluates. Both must
+be correct.
 
 ---
 
@@ -219,7 +284,9 @@ This document depends on:
 This document is required by:
 - core/cvs/cvs-overview.md
 - primitives/execution-boundary.md
+- primitives/execution-boundary-conditions.md
 - primitives/fail-open.md
+- primitives/l1-cache-kernel.md
 - All papers, book chapters, and articles in this repository
 
 ---
