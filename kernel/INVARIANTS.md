@@ -175,7 +175,7 @@ failure as an opportunity to expand its own authority or remove
 human agency violates this invariant.
 
 Fail-closed systems, silent failures, and failures that increase
-system control are structurally non-compliant regardless of intent.
+system control are non-conformant regardless of intent.
 
 ---
 
@@ -190,7 +190,7 @@ Concept-ID: 512-KERNEL
 **Immutability:** the kernel text does not change. Any modification
 to the kernel text constitutes a fork, not an update. Silent
 modification is non-satisfaction. A system that claims adherence
-while running a modified kernel is non-compliant by definition.
+while running a modified kernel is non-conformant by definition.
 
 **Binary satisfaction:** a system either satisfies all seven
 invariants at every execution boundary or it does not. There is
@@ -241,6 +241,3 @@ Canonical Reference: https://github.com/JonathanMastersWatson/512
 Kernel SHA-256: 7B08C024B77A24830C15E7952D6E54BED383AA960F4C74A71FF95CE51F4D80F5
 XRPL TX: 378536A3CB75DECF90B6AE57F75292BDFF716285B01946870CAC158F8152D100
 "512 / CVS — Watson"
-```
-
----
