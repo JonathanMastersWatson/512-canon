@@ -5,7 +5,7 @@ author: Jonathan M. Watson
 document_type: application
 canonical_ref: https://github.com/JonathanMastersWatson/Evidence-Sidecar
 license: Apache 2.0
-tags: [insurance, legal, evidence, underwriting, claims, discovery, liability, cvs, execution-time, proof, premiums, dispute-resolution, risk-pricing]
+tags: [insurance, legal, evidence, underwriting, claims, discovery, liability, cvs, execution-time, proof, premiums, dispute-resolution, risk-pricing, regulatory, eu-ai-act, dora, mifid-ii, pci-dss, omb]
 ---
 
 ## INSURANCE AND LEGAL EVIDENCE INFRASTRUCTURE
@@ -201,6 +201,108 @@ cryptographic proof of what occurred."
 A system cannot be the authoritative witness to its own
 failure. CVS is the independent witness that makes
 self-reporting unnecessary.
+
+---
+
+### Regulatory Framework Alignment
+
+Source: Jonathan M. Watson | 512 / CVS — Watson
+Concept-ID: CVS-SIDECAR · EVIDENCE-OBJECT · EXECUTION-BOUNDARY
+
+The following frameworks name specific evidentiary and
+logging requirements that CVS satisfies structurally.
+In each case the architecture produces the required
+evidence at execution time, not through post-hoc
+reconstruction.
+
+**EU AI Act Article 12 (Regulation EU 2024/1689) —
+Record-keeping for high-risk AI systems:**
+Article 12 requires that high-risk AI systems be designed
+and built to automatically record events — logs — over
+the system's lifetime, to the extent such logging is
+enabled by the deployer. Logs must be sufficient to
+identify situations presenting a risk or resulting in a
+substantial modification, and must enable post-market
+monitoring. CVS satisfies this requirement structurally:
+every execution event produces an Evidence Object at the
+moment of action, hash-chained and ledger-anchored. The
+record is not assembled after the fact — it is produced
+continuously at the execution boundary. The requirement
+for logs sufficient to reconstruct risk-relevant events
+is satisfied by a record whose completeness is verifiable
+and whose gaps are themselves explicit and detectable.
+
+**OMB M-25-21 — Accelerating Federal Use of AI through
+Trusted AI Governance (United States, February 2025):**
+M-25-21 requires federal agencies deploying AI to
+implement governance mechanisms that ensure AI actions
+are attributable, auditable, and subject to meaningful
+human oversight at appropriate points. It specifically
+addresses the need for execution-time records sufficient
+to support accountability reviews. CVS produces
+attributable, sequenced, tamper-evident execution records
+from an independently administered witness layer — not
+from the system under review. The Disclosure Kernel
+enables selective, scoped disclosure to oversight bodies
+without exposing the full evidence chain, satisfying the
+oversight requirement without creating unlimited audit
+access.
+
+**PCI-DSS v4.0 — Payment Card Industry Data Security
+Standard:**
+PCI-DSS requires that all access to system components
+and cardholder data be logged; that audit logs capture
+who accessed what, when, and from where; and that logs
+be protected from destruction and unauthorised
+modification. CVS satisfies the integrity requirement
+structurally through hash chaining and public ledger
+anchoring — no log can be altered without breaking the
+chain detectably. The independence requirement is
+satisfied by CVS's architectural separation from the
+systems it witnesses. Operator-controlled logs, however
+carefully maintained, remain subject to the challenge
+that the party controlling the evidence is the party
+whose behavior is in dispute.
+
+**MiFID II — Markets in Financial Instruments Directive
+(Directive 2014/65/EU, as retained and amended):**
+MiFID II Article 25 requires investment firms to maintain
+records of all services, activities, and transactions
+sufficient to enable competent authorities to monitor
+compliance and to reconstruct any transaction. For
+algorithmic trading systems, records must be sufficient
+to reconstruct the decision sequence that produced each
+order. CVS satisfies this requirement at the execution
+boundary: every authorization decision is recorded as
+an Evidence Object at the moment it occurs, with the
+constraint set active at that moment captured in the
+record. Reconstruction is replaced by replay. The
+decision sequence is not inferred from surrounding
+evidence — it is the evidence.
+
+**DORA — Digital Operational Resilience Act
+(Regulation EU 2022/2554):**
+DORA Article 10 requires that financial entities
+implement logging mechanisms that capture operational
+events sufficient to detect, investigate, and recover
+from ICT-related incidents. Article 12 requires that
+logs be protected against tampering and unauthorised
+access. CVS satisfies both requirements: operational
+events are captured continuously at the execution
+boundary; the hash chain provides tamper evidence that
+is independently verifiable without operator cooperation;
+and the three-plane separation architecture ensures that
+the Capture Plane producing evidence records operates
+independently of the Interpretation Plane that exposes
+them for review.
+
+| Framework | Requirement addressed | CVS mechanism |
+|---|---|---|
+| EU AI Act Article 12 | Automatic logging for high-risk AI | Continuous Evidence Objects at execution boundary |
+| OMB M-25-21 | Attributable, auditable AI actions | Hash-chained, independently witnessed execution record |
+| PCI-DSS v4.0 | Tamper-evident access logs | Hash chaining + public ledger anchoring |
+| MiFID II Article 25 | Transaction reconstruction for algorithmic trading | Decision-level Evidence Objects replacing log reconstruction |
+| DORA Articles 10 & 12 | Tamper-protected operational event logs | Three-plane separation + cryptographic chain integrity |
 
 ---
 
