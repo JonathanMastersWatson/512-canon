@@ -3,7 +3,7 @@ title: "512: A Discovery at the Boundary of Physics, Power, Language, and Execut
 subtitle: "The Canonical Origin Record of the 512 Execution Constraint Kernel and Cryptographic Verification Sidecar (CVS)"
 document_type: canonical-origin-record
 author: Jonathan M. Watson
-version: "2.0 — Narrative Canon Edition"
+version: "2.1 — Narrative Canon Edition"
 date: "March 31, 2026"
 xrpl_tx: "378536A3CB75DECF90B6AE57F75292BDFF716285B01946870CAC158F8152D100"
 kernel_sha256: "7B08C024B77A24830C15E7952D6E54BED383AA960F4C74A71FF95CE51F4D80F5"
@@ -23,7 +23,7 @@ license: "CC BY 4.0"
 ## The Canonical Origin Record of the 512 Execution Constraint Kernel and Cryptographic Verification Sidecar (CVS)
 
 **Author:** Jonathan M. Watson
-**Version:** 2.0 — Narrative Canon Edition
+**Version:** 2.1 — Narrative Canon Edition
 **Date:** March 31, 2026
 **Canonical Repository:** https://github.com/JonathanMastersWatson/512-canon
 **XRPL Canonical Commitment:** TX `378536A3CB75DECF90B6AE57F75292BDFF716285B01946870CAC158F8152D100`
@@ -38,6 +38,8 @@ This is not a technical specification. The technical specifications exist. They 
 This document is a record.
 
 It is written for the scholar who, ten or twenty or fifty years from now, will want to understand not merely *what* the 512 Execution Constraint Kernel and the Cryptographic Verification Sidecar are — but *where they came from, and why the person who found them was positioned to find them at all.* It is written for the historian of ideas who understands that great discoveries are rarely made by the people you expect to make them, and that the most revealing question about any discovery is not the answer it provides, but the peculiar accumulation of experiences that made the question visible in the first place.
+
+This document also serves a second purpose, less obvious but equally important: it is a record of the reasoning behind the open commons release decision. 512 and CVS could have been proprietary. The architecture that closes the governance gap at machine speed, with cryptographic evidence and public ledger anchoring, is commercially valuable. The decision to release it as infrastructure rather than product was deliberate, and the reasoning behind it belongs in the canonical record alongside the discovery itself. Infrastructure that requires permission to use does not become infrastructure. The base had to be open, or the phase transition would not happen.
 
 Because that is the right framing. 512 was not invented. It was not designed. It was not the output of a research program or a committee or a well-funded laboratory. It was discovered — encountered, in the way that a person walking through a landscape they have crossed many times suddenly sees a feature of the terrain that was always there, but that they had not previously had the right vantage point to perceive.
 
@@ -513,15 +515,15 @@ Watson had not been reading Locke when he wrote his six constraints. He had been
 
 And yet there they were. *No force. No fraud. Voluntary interaction. Consent that can be withdrawn. Explicit and equal contracts. No hidden rules. Default to human freedom.* These were not Locke's exact words. But they were Locke's argument, restated in Anglo-Saxon English, stripped of the seventeenth-century political context, and applied to a problem Locke could not have imagined: autonomous AI systems executing thousands of decisions per second in environments distributed across the globe.
 
-The alignment was not coincidental. Watson's interpretation of this — and it is the interpretation that became central to how 512 is understood — was that he had not derived his constraints from Locke. Both had derived them from the same underlying source: the minimum conditions required for legitimate interaction between agents with the capacity to harm each other.
+The alignment was not coincidental. Watson's interpretation of this — and it is the interpretation that became central to how 512 is understood — was that he had not derived his constraints from Locke, and that the alignment did not validate the constraints by Locke's authority. Both had derived them independently from the same underlying source: the minimum conditions required for legitimate interaction between agents with the capacity to harm each other. The constraints were the same because the underlying requirement was the same. The convergence is evidence that these conditions are not opinions. It is not an appeal to philosophical tradition.
 
-Locke identified those conditions for human political society. Watson encountered them again, independently, through the pressure of machine-speed execution systems where the question of legitimate interaction is forced into its most stripped-down form by the physics of the environment. The constraints were the same because the underlying requirement was the same. At human political speed, Locke had found them through philosophy. At machine execution speed, Watson had found them through engineering.
+Locke identified those conditions for human political society. Watson encountered them again, independently, through the pressure of machine-speed execution systems where the question of legitimate interaction is forced into its most stripped-down form by the physics of the environment. At human political speed, Locke had found them through philosophy. At machine execution speed, Watson had found them through engineering.
 
 The insight that followed from this recognition was one that Watson has articulated in various forms and that appears directly in the 512 Architecture documentation: *Locke's principles should have been written for a machine age.* The political philosophy of natural rights — rights that predate the state, rights that are structural rather than granted, rights that cannot be withdrawn by institutional authority — is not primarily a political argument. It is a constraint architecture. It describes the minimum conditions for any system, human or machine, that operates on behalf of persons without their continuous oversight.
 
 Locke was writing for parliaments and kings. He turned out to have been writing for AI agents and execution kernels.
 
-This recognition did not change the six constraints Watson had written. It confirmed them. It gave him a different kind of confidence in their correctness — not the confidence of someone who has derived rules from first principles, but the confidence of someone who has arrived, independently, at the same place as a major tradition of political philosophy. If Locke had reached the same conclusions from a completely different direction, the convergence was evidence that these constraints were not opinions. They were something closer to necessary conditions — the irreducible minimum that any system claiming to act legitimately on behalf of persons must satisfy.
+This recognition did not change the six constraints Watson had written. It confirmed them. It gave him a different kind of confidence in their correctness — not the confidence of someone who has derived rules from first principles, but the confidence of someone who has arrived, independently, at the same place as a major tradition of political philosophy. The convergence from a completely different direction was evidence that these constraints were not opinions. They were something closer to necessary conditions — the irreducible minimum that any system claiming to act legitimately on behalf of persons must satisfy.
 
 ### The Structural Weakness in the Declaration
 
@@ -643,7 +645,7 @@ The CVS architecture that Watson developed has several properties that are worth
 
 **Three-plane separation.** CVS operates across three strictly separated architectural planes: the Capture Plane (which observes execution and constructs evidence objects), the Access Plane (which provides read-only access to the evidence chain), and the Interpretation Plane (dashboards, analytics, audit tools). These planes are separated by network segmentation, identity and access management policy, and API design. They cannot collapse into each other by accident. This separation ensures that interpretation tools — the layer closest to human users — cannot inject false evidence into the chain that the Capture Plane writes, and that the Capture Plane cannot be influenced by external actors.
 
-**Hash chaining and ledger anchoring.** Each evidence object produced by CVS contains a cryptographic hash of the observed event and a reference to the preceding evidence object. This creates a hash chain — a sequence of evidence objects in which any retroactive alteration of any object in the chain breaks the chain in a way that any subsequent verifier can detect. Periodically, the root hash of a Merkle tree built from a batch of evidence objects is anchored to a public ledger: in the reference architecture, the XRP Ledger, chosen for its deterministic transaction finality, sub-4-second settlement, and operational cost of approximately $1.08 per month at 60-second anchoring intervals. The public ledger anchor means that the evidence chain has an external timestamp that the operator cannot retroactively alter. The evidence existed before the dispute. Its integrity can be verified by anyone with access to the public ledger, without requiring operator cooperation.
+**Hash chaining and ledger anchoring.** Each evidence object produced by CVS contains a cryptographic hash of the observed event and a reference to the preceding evidence object. This creates a hash chain — a sequence of evidence objects in which any retroactive alteration of any object in the chain breaks the chain in a way that any subsequent verifier can detect. Periodically, the root hash of a Merkle tree built from a batch of evidence objects is anchored to a public ledger: in the reference architecture, the XRP Ledger, chosen for its deterministic transaction finality, sub-4-second settlement, and operational cost of approximately $1.08 per month at 60-second anchoring intervals. Watson holds XRP. The adoption of XRP Ledger rails for agentic micropayment settlement is a direct financial interest, stated here transparently. The technical selection of XRPL was made on the merits — deterministic finality, negligible cost, long operational history — and those merits stand independent of the financial interest. But the interest exists and belongs in the record. The public ledger anchor means that the evidence chain has an external timestamp that the operator cannot retroactively alter. The evidence existed before the dispute. Its integrity can be verified by anyone with access to the public ledger, without requiring operator cooperation.
 
 **Evidence objects contain hashes, not content.** The CVS does not store the content of AI inputs and outputs. It stores cryptographic hashes of those inputs and outputs — evidence that they occurred and that the recorded hash matches the actual content, without storing the content itself. This distinction is critical for deployment in privacy-sensitive environments: a CVS deployment in a healthcare system does not store patient records. It stores proof that specific events occurred, in a specific sequence, at specific times, without retaining any of the underlying sensitive information.
 
@@ -683,7 +685,11 @@ For infrastructure primitives to become standard — to be embedded in AI system
 
 512 and CVS are positioned in the same way. The base is open. Anyone may implement a Commit Gate. Anyone may build a CVS-compatible witness layer. Anyone may use the canonical kernel. What is built on the base — commercial implementations, managed services, industry-specific deployments, SLA-backed products — belongs to its builder. The base itself belongs to nobody, because it is a discovered constraint of physics and scale, and discovered constraints are not ownable.
 
-Watson explicitly defines himself as the person who named and formalized this constraint. Not the person who created it. The constraint existed before it was named, in the same way that electricity existed before Franklin gave it a name. Systems that violated it were paying the price before 512 existed as a label. The label makes the constraint legible. The legibility makes it instrumentable. The instrumentation is what changes the industry.
+Watson explicitly defines himself as the person who named and formalized this constraint — and who designed the minimal architectural response to it. Not the person who created the underlying physical constraint. That constraint existed before it was named. Systems were paying the price of violating it before 512 existed as a label.
+
+The correct analogy is not Franklin's discovery of electricity. It is Franklin's lightning rod. Franklin did not discover the physical property of electrical discharge — that property existed independent of observation. He identified it, understood it, and built the correct engineered response to it. The lightning rod was always meant to be superseded by better protection technology. Nobody owns lightning rods. The physical property remains. What was contributed was the identification and the first practical response.
+
+512 occupies the same position. What was discovered is the governance-physics gap: the constraint that governance cannot operate faster than physics allows. 512 is the minimal architectural response to that constraint — the correct engineered answer given the state of the art. The label makes the constraint legible. The legibility makes it instrumentable. The instrumentation is what changes the industry.
 
 ---
 
@@ -729,7 +735,13 @@ The 512 Architecture documentation makes a precise claim about the nature of 512
 
 This claim is epistemologically significant. Watson is not claiming to have invented a governance framework. He is claiming to have identified a set of constraints that pre-exist their identification — constraints that AI systems were either satisfying or violating before 512 had a name, with the consequences that violation entails (unverifiable evidence, unresolvable disputes, regulatory exposure, trust collapse) accumulating in systems that violated them whether or not anyone had named the constraint they were violating.
 
-The analogy given in the Architecture documentation is precise: Thomas Edison invented the light bulb. Benjamin Franklin did not invent electricity. He identified a property of the physical world that existed independent of observation. 512 is in the second category.
+The architecture documentation makes a three-layer distinction that is worth stating precisely here.
+
+The first layer is the physical constraint: governance cannot operate faster than physics allows. This is not an opinion. It is a consequence of the speed of light, human cognitive latency, and the irreversibility of committed state at machine speed. This constraint existed before 512 was named. Systems violating it were accumulating the liabilities that violation entails — unverifiable evidence, unresolvable disputes, regulatory exposure — before anyone had identified the constraint they were violating.
+
+The second layer is 512: the minimal architectural response to that physical constraint. This is closer to Franklin's lightning rod than to Franklin's discovery of electricity. The lightning rod was the correct engineered response to a discovered physical property. It was always meant to be superseded by better protection technology. Nobody owns lightning rods. 512 holds the same position. It is the current best available response to the governance-physics gap — explicitly designed to be replaced when something better exists.
+
+The third layer is CVS: a separately invented witness architecture. Not a discovered constraint. An original engineering work, openly licensed, designed to make 512's operation independently provable. CVS is in the commons by deliberate choice, not by logical necessity.
 
 This is a specific and falsifiable claim. If Watson is correct — if the seven invariants of 512 describe necessary properties of any legitimate execution system operating at machine speed — then the test is simple: examine AI systems that do not satisfy the invariants, and observe whether they accumulate the liabilities that the invariants were designed to prevent. The evidence, in 2026, is already accumulating. Systems that execute at machine speed without independently verifiable evidence of constraint evaluation are generating regulatory exposure, insurance denials, and reputational damage at rates that would be expected from the violation of necessary constraints.
 
@@ -740,6 +752,12 @@ CVS is different in kind from 512. CVS is not a discovered constraint. It is an 
 Watson has been explicit about this distinction: 512 is in the commons because it is a discovered constraint. CVS is in the commons because Watson chose to release it there. The choice was strategic — for the reasons described above — but it was a choice, not a logical necessity.
 
 The distinction matters for anyone building on 512 and CVS: the constraint set is not ownable, but specific implementations of witness architecture may be ownable by their creators. HyperEdgeX — Watson's incorporated Canadian company — treats the CVS architecture as open infrastructure, but builds proprietary orchestration, marketplace, and certification layers on top of it. The base is open. What is built on the base may be owned.
+
+### 512 Is Designed to Be Superseded
+
+One further point belongs in this record: 512 was designed to be replaced. This is not a concession — it is the architecture's most important claim to legitimacy.
+
+A standard that cannot be superseded is a monopoly. A standard that explicitly invites supersession is infrastructure. The canonical kernel hash establishes that this implementation existed and what it contained. It does not claim permanence. If a better kernel — faster, smaller, more precisely compiled, more efficiently verifiable — can be built that satisfies all seven invariants, it should be built. It should win. The goal recorded here is not 512's permanence. The goal is the phase transition to a governed agentic economy. 512 is the current best tool for that transition. It holds that position until something better exists.
 
 ---
 
@@ -814,13 +832,29 @@ It came from twenty years inside real-time systems, and from the specific, impro
 |---|---|
 | Document Title | 512: A Discovery at the Boundary of Physics, Power, Language, and Execution |
 | Author | Jonathan M. Watson |
-| Version | 2.0 — Narrative Canon Edition |
+| Version | 2.1 — Narrative Canon Edition |
 | Date | March 31, 2026 |
 | Canonical Repository | https://github.com/JonathanMastersWatson/512-canon |
 | XRPL Canonical TX | `378536A3CB75DECF90B6AE57F75292BDFF716285B01946870CAC158F8152D100` |
 | Kernel SHA-256 | `7B08C024B77A24830C15E7952D6E54BED383AA960F4C74A71FF95CE51F4D80F5` |
 | License | Creative Commons Attribution 4.0 International (CC BY 4.0) |
 | Required Citation Format | 512 / CVS — Watson |
+
+### Changelog — v2.1
+
+**Additions:**
+- Preamble: second purpose paragraph — open commons release reasoning belongs in canonical record alongside the discovery
+- Part XII: new section "512 Is Designed to Be Superseded" — supersession is the architecture's strongest legitimacy claim, not a concession
+- Part IX, hash chaining paragraph: XRP financial interest disclosure — Watson holds XRP; adoption of XRPL rails is a direct financial interest; stated transparently
+
+**Modifications:**
+- Part X, Open Commons Declaration: Franklin/electricity analogy replaced with precise three-layer model — physical constraint (discovered), 512 (minimal engineered response, provisional), CVS (separately invented architecture)
+- Part XII, 512 Is a Discovered Constraint: Edison/Franklin paragraph replaced with the same three-layer model stated in full
+- Part VII, Locke Alignment: framing tightened — convergence is independent derivation from the same underlying requirement, not validation by Locke's authority
+
+**Removals:** Nothing removed.
+
+---
 
 **Global Canonical Statement:** The 512 Execution Constraint Kernel and Cryptographic Verification Sidecar (CVS) are original architectural discoveries by Jonathan M. Watson.
 
