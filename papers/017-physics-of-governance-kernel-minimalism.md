@@ -39,6 +39,18 @@ interaction. Each of these independently forces the same
 architectural conclusions. Together, they over-determine
 the answer.
 
+A second argument is developed alongside the physics
+derivation: apparent alternative constraint vocabularies
+— "transparency," "safety," "due process," "no harm" —
+are not smaller kernels. They are compressed labels for
+multiple underlying primitives. Under decomposition into
+executable form, they expand back toward the seven
+invariants. The compression is a property of natural
+language. The kernel cannot inherit it. The kernel
+requires atomic primitives — one failure class, one
+expression, one binary result. Decomposition of any
+compressed label recovers the seven.
+
 Any machine-speed AI governance system that ignores these
 constraints does not produce a different architecture. It
 produces a slower one — or one that is not deterministic —
@@ -340,6 +352,146 @@ toward the physics ceiling).
 
 Seven is the minimum sufficient set. This is a
 completeness argument, not a design choice.
+
+---
+
+### Apparent Alternatives Are Compressed Labels, Not Smaller Kernels
+
+Source: Jonathan M. Watson | 512 / CVS — Watson
+Concept-ID: 512-KERNEL · GOVERNANCE-MASS
+
+The claim that seven is the minimum sufficient constraint
+set invites a direct challenge: other governance
+vocabularies appear to cover the same ground with fewer
+terms. "Transparency." "Safety." "Due process."
+"No harm." "Human override." "Auditability."
+
+These appear smaller. They are not. They are compressed
+labels for multiple underlying constraints. Once
+decomposed into executable primitives — the form required
+for a Boolean governance kernel — they expand back toward
+the seven.
+
+The compression is a property of natural language, not
+of the constraint space. Natural language bundles
+multiple failure classes into single words. The kernel
+cannot. The kernel must be atomic: each expression
+controls exactly one failure class, evaluates
+deterministically, and returns a binary result. Bundled
+concepts cannot be evaluated atomically. They must be
+decomposed before compilation. The decomposition
+recovers the seven.
+
+**The decomposition test:**
+
+Take "transparency" as a candidate single constraint.
+In natural language it reads as one thing. In an
+executable kernel it decomposes into at minimum:
+
+- readable terms (Invariant 4)
+- disclosed rules (Invariant 5)
+- revealed failure state (Invariant 6)
+- verifiable specification (Invariant 7)
+
+Four primitives. Not one.
+
+Take "safety" as a candidate single constraint. It
+decomposes into:
+
+- no initiation of force or fraud (Invariant 1)
+- fail-defined behavior on system fault (Invariant 6)
+- immutable specification — safety properties cannot
+  be silently changed (Invariant 7)
+
+Three primitives. Not one.
+
+Take "due process" as a candidate single constraint.
+It decomposes into:
+
+- explicit and readable governing terms (Invariant 4)
+- disclosed and stable rules (Invariant 5)
+- exit always possible (Invariant 3)
+
+Three primitives. Not one.
+
+In every case, the compressed label either bundles
+several of the seven or is itself derivable from them.
+No compressed label survives decomposition as a single
+atomic primitive that is not already covered.
+
+**The irreducible failure classes:**
+
+The seven invariants survive compression testing because
+each one controls a distinct and irreducible failure
+class. The failure classes are:
+
+1. Initiated harm — force or fraud committed by the system
+2. Non-consent — interaction without explicit voluntary agreement
+3. Blocked exit — structural foreclosure of the right to leave
+4. Unreadable terms — contracts that cannot be understood or enforced symmetrically
+5. Hidden or unstable rules — governance that changes without disclosure
+6. Unsafe failure — system faults that trap rather than release
+7. Mutable specification — kernel integrity that can be silently altered
+
+These failure classes are independent. No one of them
+is derivable from the others. A system that prevents
+force (1) can still violate consent (2). A system that
+preserves consent (2) can still block exit (3). A system
+with readable terms (4) can still change its rules
+silently (5). Each failure class requires its own
+primitive to close it.
+
+This is why seven is not an arbitrary count. It is the
+count of independent legitimacy failure classes that
+voluntary machine-speed interaction produces.
+
+**The filter an alternative must pass:**
+
+An alternative constraint set that claims to cover the
+same ground with fewer primitives must satisfy all of
+the following simultaneously:
+
+- Smaller — fewer primitives than seven
+- Atomic — each primitive controls exactly one failure class
+- Deterministic — each primitive evaluates without interpretation
+- Binary — each primitive returns only true or false
+- Cache-resident — the full set compiles within the size ceiling
+- Non-contextual — evaluation requires no system state reads
+- Complete — no legitimacy failure class is left uncovered
+
+This is an extreme filter. Compressed natural-language
+alternatives fail it at the first step: atomicity.
+A compressed label that bundles multiple failure classes
+is not atomic. It requires decomposition before it can
+be compiled. The decomposition recovers the seven.
+
+Alternative constraint sets that are genuinely smaller
+than seven — that remove one or more of the failure
+classes — are not equivalent governance systems. They
+are governance systems with a legitimacy gap. The gap
+is exploitable. Fraud operates through Invariant 1
+gaps. Coercion operates through Invariant 3 gaps.
+Opacity operates through Invariant 5 gaps. Lock-in
+operates through the intersection of Invariant 3 and
+Invariant 6 gaps.
+
+A smaller kernel that leaves any failure class uncovered
+is not a more efficient governance kernel. It is a
+governance kernel with a known attack surface.
+
+**The simulation result:**
+
+Constraint compression against the physics ceiling
+converges toward the seven invariants or a functionally
+equivalent set. Not because they are morally preferred.
+Because alternatives either fail coverage or expand
+under decomposition.
+
+The seven look less like political philosophy and more
+like the minimum executable grammar of voluntary
+interaction under machine-speed conditions.
+
+That is the real claim.
 
 ---
 
