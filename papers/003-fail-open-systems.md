@@ -1,5 +1,5 @@
 ---
-title: 512 — Fail-Open Systems: Execution-Time Governance for Distributed AI
+title: "512 — Fail-Open Systems: Execution-Time Governance for Distributed AI"
 concept_ids: [FAIL-OPEN-POSTURE, 512-KERNEL, EXECUTION-BOUNDARY, CVS-SIDECAR]
 author: Jonathan M. Watson
 document_type: white-paper
