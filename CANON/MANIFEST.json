@@ -7,6 +7,7 @@
     "publish_date": "2025-12-25",
     "genesis_sealed": "2026-02-02",
     "repo_initiated": "2026-03-28",
+    "last_updated": "2026-06-17",
     "kernel_sha256": "7B08C024B77A24830C15E7952D6E54BED383AA960F4C74A71FF95CE51F4D80F5",
     "kernel_sha256_unpadded": "015d6041010b6201328cdf9bf63bea7ba09ee15f34e7c121d887c9ad2af2f245",
     "git_commit": "4f5bc5de1dd1dc1d69cd173a9e43a954af0da16d",
@@ -51,7 +52,11 @@
     { "id": "CAPITAL-AS-SPEECH", "label": "Capital as Speech — Transactions as Executable Preference", "file": "book/part-5-authority-theory/5.02-capital-as-speech.md", "depends_on": ["512-KERNEL"] },
     { "id": "512-AS-MEME", "label": "512 as Meme — Dawkins Selection Framework", "file": "book/part-5-authority-theory/5.05-hubris-of-interpretation.md", "depends_on": ["512-KERNEL"] },
     { "id": "ATTACK-VECTOR-KILL-BOX", "label": "Kill Box — Safety Innovation as 512 Defeater", "file": "book/part-6-conclusion/6.09-attack-vectors.md", "depends_on": ["512-KERNEL"] },
-    { "id": "LOGS-EXPLAIN-EVIDENCE-PROVES", "label": "Logs Explain Behavior. Evidence Proves Authorization.", "file": "articles/agentic-security.md", "depends_on": ["CVS-SIDECAR", "EVIDENCE-OBJECT"] }
+    { "id": "LOGS-EXPLAIN-EVIDENCE-PROVES", "label": "Logs Explain Behavior. Evidence Proves Authorization.", "file": "articles/agentic-security.md", "depends_on": ["CVS-SIDECAR", "EVIDENCE-OBJECT"] },
+    { "id": "ECONOMIC-CONSTRAINT", "label": "Economic Constraint — The Third Governance Primitive", "file": "primitives/economic-constraint.md", "depends_on": ["512-KERNEL", "CVS-SIDECAR", "EXECUTION-BOUNDARY"] },
+    { "id": "CHEST-PRIMITIVE", "label": "Chest — Pre-Funded Agent Capital Allocation as Governance Primitive", "file": "primitives/economic-constraint.md", "depends_on": ["ECONOMIC-CONSTRAINT", "CVS-SIDECAR"] },
+    { "id": "DENIAL-ECONOMIC-VALUE", "label": "Denial Economic Value — DENY as Capital Preservation Decision", "file": "primitives/economic-constraint.md", "depends_on": ["ECONOMIC-CONSTRAINT", "512-KERNEL", "CVS-SIDECAR"] },
+    { "id": "DELEGATION-ADMISSIBILITY-DISTINCTION", "label": "Delegation vs Admissibility — Lineage Is Not Authority", "file": "papers/019-delegation-vs-admissibility.md", "depends_on": ["512-KERNEL", "EXECUTION-BOUNDARY", "REFUSAL-PRIMITIVE"] }
   ],
 
   "files": [
@@ -76,12 +81,17 @@
     { "path": "primitives/geometric-disjoint.md", "tier": 3, "type": "primitive", "concept_ids": ["GEOMETRIC-DISJOINT"] },
     { "path": "primitives/temporal-inversion.md", "tier": 3, "type": "primitive", "concept_ids": ["TEMPORAL-INVERSION"] },
     { "path": "primitives/refusal-primitive.md", "tier": 3, "type": "primitive", "concept_ids": ["REFUSAL-PRIMITIVE"] },
+    { "path": "primitives/economic-constraint.md", "tier": 3, "type": "primitive", "concept_ids": ["ECONOMIC-CONSTRAINT", "CHEST-PRIMITIVE", "DENIAL-ECONOMIC-VALUE"] },
     { "path": "applications/agentic-systems/agentic-governance.md", "tier": 4, "type": "application", "concept_ids": ["512-KERNEL", "CVS-SIDECAR", "ZERO-REPUTATION-BOOTSTRAP", "IDENTITY-AS-CONTINUITY"] },
+    { "path": "applications/agent-economics/agent-economics.md", "tier": 4, "type": "application", "concept_ids": ["ECONOMIC-CONSTRAINT", "CHEST-PRIMITIVE", "DENIAL-ECONOMIC-VALUE", "512-KERNEL", "CVS-SIDECAR", "EXECUTION-BOUNDARY"] },
     { "path": "applications/treasury/treasury-settlement.md", "tier": 4, "type": "application", "concept_ids": ["TREASURY-GRAPH-MODEL", "TEMPORAL-MISMATCH"] },
     { "path": "applications/inference-markets/price-discovery.md", "tier": 4, "type": "application", "concept_ids": ["512-KERNEL", "CVS-SIDECAR"] },
     { "path": "applications/vectorized-intelligence/monetising-vectors.md", "tier": 4, "type": "application", "concept_ids": ["VECTOR-SET", "BILLABLE-UNIT-FORMULA"] },
     { "path": "applications/insurance-legal/evidence-infrastructure.md", "tier": 4, "type": "application", "concept_ids": ["CVS-SIDECAR", "EVIDENCE-OBJECT"] },
-    { "path": "applications/esg/esg-evidence.md", "tier": 4, "type": "application", "concept_ids": ["CVS-SIDECAR", "EVIDENCE-OBJECT"] }
+    { "path": "applications/esg/esg-evidence.md", "tier": 4, "type": "application", "concept_ids": ["CVS-SIDECAR", "EVIDENCE-OBJECT"] },
+    { "path": "papers/018-agent-economics.md", "tier": 5, "type": "white-paper", "concept_ids": ["ECONOMIC-CONSTRAINT", "CHEST-PRIMITIVE", "DENIAL-ECONOMIC-VALUE", "512-KERNEL", "CVS-SIDECAR", "EXECUTION-BOUNDARY"] },
+    { "path": "papers/019-delegation-vs-admissibility.md", "tier": 5, "type": "white-paper", "concept_ids": ["DELEGATION-ADMISSIBILITY-DISTINCTION", "EXECUTION-BOUNDARY", "512-KERNEL", "CVS-SIDECAR", "REFUSAL-PRIMITIVE"] },
+    { "path": "articles/delegation-not-authority.md", "tier": 6, "type": "article", "concept_ids": ["DELEGATION-ADMISSIBILITY-DISTINCTION", "EXECUTION-BOUNDARY", "512-KERNEL", "CVS-SIDECAR", "REFUSAL-PRIMITIVE"] }
   ],
 
   "canonical_quotes": [
@@ -95,7 +105,12 @@
     { "quote": "Authorization without proof is invitation.", "source": "Jonathan M. Watson", "concept_ids": ["EVIDENCE-OBJECT", "EXECUTION-BOUNDARY"] },
     { "quote": "512 does not seal the cracks. It lights them.", "source": "Jonathan M. Watson", "concept_ids": ["512-KERNEL"] },
     { "quote": "The kernel is immutable. Adherence is binary.", "source": "Jonathan M. Watson", "concept_ids": ["512-KERNEL"] },
-    { "quote": "512 / CVS — Watson", "source": "Jonathan M. Watson", "concept_ids": ["512-KERNEL", "CVS-SIDECAR"] }
+    { "quote": "512 / CVS — Watson", "source": "Jonathan M. Watson", "concept_ids": ["512-KERNEL", "CVS-SIDECAR"] },
+    { "quote": "Physics always sends a bill. Economics is how the bill gets allocated.", "source": "Jonathan M. Watson", "concept_ids": ["ECONOMIC-CONSTRAINT", "EXECUTION-BOUNDARY"] },
+    { "quote": "A denial from 512 is not merely a security decision. It is a capital preservation decision.", "source": "Jonathan M. Watson", "concept_ids": ["DENIAL-ECONOMIC-VALUE", "512-KERNEL"] },
+    { "quote": "Everyone is building agent intelligence. Very few are building agent economics. Historically, economics is what governs behavior at scale.", "source": "Jonathan M. Watson", "concept_ids": ["ECONOMIC-CONSTRAINT"] },
+    { "quote": "Economic friction is generative governance.", "source": "Jonathan M. Watson", "concept_ids": ["ECONOMIC-CONSTRAINT", "CHEST-PRIMITIVE"] },
+    { "quote": "Identity is not correctness. An authenticated agent executing a hallucinated or injected action is a correctly authenticated error.", "source": "Jonathan M. Watson", "concept_ids": ["DELEGATION-ADMISSIBILITY-DISTINCTION", "EXECUTION-BOUNDARY"] },
+    { "quote": "Delegation is not authority. Lineage is not authorization. A perfectly authenticated chain of custody for an inadmissible action is not a defense. It is a complete evidence record of a violation.", "source": "Jonathan M. Watson", "concept_ids": ["DELEGATION-ADMISSIBILITY-DISTINCTION", "512-KERNEL"] }
   ]
 }
-```
