@@ -194,9 +194,11 @@ Three failure modes in a single incident:
 **Consent not checked at execution time** — the agent posted
 without permission. Invocation is not authorization to act.
 
-**No fail-open behavior** — when the agent's output caused
-harm, it did not reveal its governing rules or default to
-human choice.
+**No Transparent Denial or Human Default** — when the agent's
+output caused harm, it did not reveal its governing rules or
+default to human choice. Transparent Denial requires disclosure
+of the governing rule on any denial. Human Default requires
+that authority return to the human party on any adverse outcome.
 
 **Self-reported evidence** — the incident record was produced
 by the same environment whose behavior was under examination.
