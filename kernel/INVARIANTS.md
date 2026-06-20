@@ -177,6 +177,12 @@ human agency violates this invariant.
 Fail-closed systems, silent failures, and failures that increase
 system control are non-conformant regardless of intent.
 
+The authoritative elaboration of this invariant — including the
+three named obligations (Evaluation-Unavailable DENY, Transparent
+Denial, Human Default), the disclosure boundary, the external
+authority test, and terminology governance — is defined in
+`512-core/KERNEL/I6_CONSTITUTIONAL_ELABORATION.md`.
+
 ---
 
 ### Invariant 7 — Immutability and Binary Satisfaction
