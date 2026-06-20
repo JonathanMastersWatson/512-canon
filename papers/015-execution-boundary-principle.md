@@ -333,8 +333,10 @@ amendment event. Any deviation is a rule change without authorization.
 When the constraint kernel cannot complete evaluation, the boundary routes to a
 defined fallback state. The governing rules must remain human-readable at all times.
 The fallback state must be pre-declared, not resolved at failure time. Compilation
-note: fail-open in lower-risk environments; fail-closed in high-consequence domains.
-Neither is universal. CVS records the gap regardless of fail direction.
+note: gate unavailability produces Evaluation-Unavailable DENY — commit path
+remains closed, cause disclosed, retry permitted. This is unconditional across
+all domains. CVS sidecar records the unavailability period as a gap record.
+See `512-core/KERNEL/I6_CONSTITUTIONAL_ELABORATION.md`.
 
 **Invariant 7 — Self-Referential — Directly computable**
 *Immutable Specification with Amendment Record.*
@@ -636,7 +638,7 @@ Source: Jonathan M. Watson | 512 / CVS — Watson
 | Condition 1 — "single identifiable control point" | Extended to include distributed topology: logically unified replicated enforcement points | Strengthened — the original was immediately falsifiable for any distributed system |
 | Condition 3 — "architecturally non-circumventable" | Reframed as non-bypassable within the governed execution domain; privileged actors, hardware bypass, OOB paths explicitly acknowledged | Strengthened — the revised form is technically defensible |
 | 512 invariants — no computability annotation | Each invariant now classified: directly computable / proxy / compiled via proxy. Constraint Compilation Layer introduced | Strengthened — V1 implied the invariants were directly machine-executable. Four of seven are not |
-| Invariant 6 — "fails open" | Changed to: "fails to pre-declared state (open or closed, domain-dependent)" | Strengthened — fail-open in a high-consequence domain is incorrect and dangerous |
+| Invariant 6 — "fails open" | Prior v3.0 changed to "fails to pre-declared state (open or closed, domain-dependent)." Superseded — I6 is unconditional. Gate unavailability produces Evaluation-Unavailable DENY in all domains. The commit boundary holds unconditionally. See `core/FAIL_OPEN_RESOLUTION.md`. | Corrected — domain-configurable fail direction is constitutionally incorrect |
 | CVS — "only architectural arrangement" | Removed. Replaced with trust model table showing CVS evidence strength by configuration | Weakened by degree — other evidence architectures exist and have been accepted |
 | V2→V3: Deployment world framing | Replaced centralized hyperscaler framing with edge-dense hardware node model. Agents are compiled CPU processes, not probabilistic inference calls | Strengthened — the origin architecture was always the correct target world |
 | V2→V3: Sub-10-microsecond restored | Reverted from V2's sub-10-millisecond. Sub-10-microsecond is the correct hot-path envelope for compiled agent runtimes on edge hardware | Strengthened — the original number was right |
