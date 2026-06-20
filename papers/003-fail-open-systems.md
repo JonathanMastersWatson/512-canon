@@ -1,12 +1,12 @@
 ---
 title: "512 — Fail-Open Systems: Execution-Time Governance for Distributed AI"
-concept_ids: [FAIL-OPEN-POSTURE, 512-KERNEL, EXECUTION-BOUNDARY, CVS-SIDECAR]
+concept_ids: [FAIL-OPEN-POSTURE, 512-KERNEL, EXECUTION-BOUNDARY, CVS-SIDECAR, EVALUATION-UNAVAILABLE-DENY]
 author: Jonathan M. Watson
 document_type: white-paper
 canonical_ref: https://github.com/JonathanMastersWatson/512
 license: CC BY 4.0
 published: 2025-12-16
-tags: [fail-open, distributed-ai, execution-governance, agentic-ai, safety, human-choice, machine-speed, invariant-6, white-paper]
+tags: [fail-open, distributed-ai, execution-governance, agentic-ai, safety, human-choice, machine-speed, invariant-6, white-paper, evaluation-unavailable-deny, transparent-denial, human-default]
 ---
 
 ## 512 — FAIL-OPEN SYSTEMS: EXECUTION-TIME GOVERNANCE FOR DISTRIBUTED AI
@@ -33,14 +33,15 @@ wrong, they lock down, halt processes, restrict access, and
 freeze state. This protects the machine. It traps the human.
 
 512 inverts this. The sixth invariant requires that on any
-failure condition, a system must fail open — reveal its
-governing rules and return authority to the human party.
+failure condition, a system must not weaponise its own failure
+as concealed restriction — the basis for any denial must be
+disclosed and authority must return to the human party.
 
-This paper explains why fail-open is not a safety compromise.
-It is the only failure posture compatible with voluntary
-interaction at machine speed. Fail-closed systems that trap
-humans on failure are coercive by construction, regardless
-of intent.
+This paper explains why I6's failure posture is not a safety
+compromise. It is the only failure posture compatible with
+voluntary interaction at machine speed. Systems that conceal
+the basis for denial or trap humans on failure are coercive
+by construction, regardless of intent.
 
 ---
 
@@ -104,7 +105,7 @@ posture consistent with all three simultaneously.
 ### Fail-Open in Distributed AI Systems
 
 Source: Jonathan M. Watson | 512 / CVS — Watson
-Concept-ID: FAIL-OPEN-POSTURE · CVS-SIDECAR
+Concept-ID: FAIL-OPEN-POSTURE · CVS-SIDECAR · EVALUATION-UNAVAILABLE-DENY
 
 Distributed AI systems create new failure modes that
 conventional safety thinking was not designed to address.
@@ -115,16 +116,18 @@ When an AI agent fails mid-task:
 - What remains undone?
 - Who decides what happens next?
 
-Without fail-open architecture, these questions are answered
-by the system — which may be partially failed, operating
-under incomplete information, or optimizing for task
-completion rather than human welfare.
+Without I6-conforming architecture, these questions are
+answered by the system — which may be partially failed,
+operating under incomplete information, or optimizing for
+task completion rather than human welfare.
 
-With fail-open architecture:
-- The agent surfaces its governing rules
-- It discloses what it has done and what remains
-- It returns control to the human
-- The human decides whether to continue, modify, or abort
+With I6-conforming architecture:
+- Gate failure produces Evaluation-Unavailable DENY — commit
+  boundary holds, cause disclosed, retry permitted
+- Constraint violation produces Transparent Denial — failed
+  invariant identified, governing rule disclosed
+- Authority returns to the human party (Human Default)
+- The human decides whether to retry, modify, or abort
 
 This is not a degraded state. It is the correct failure
 state for any system operating under voluntary interaction
@@ -153,12 +156,17 @@ as much as to the execution layer. An evidence system
 that creates coercion through availability failure is
 not CVS-conforming.
 
+Note: CVS sidecar fail-open governs the witness layer only.
+Gate-layer behaviour on infrastructure failure is governed
+by the Evaluation-Unavailable DENY doctrine — the commit
+path remains closed regardless of sidecar state.
+
 ---
 
 ### Why Fail-Open Scales When Fail-Closed Does Not
 
 Source: Jonathan M. Watson | 512 / CVS — Watson
-Concept-ID: FAIL-OPEN-POSTURE · GOVERNANCE-MASS
+Concept-ID: FAIL-OPEN-POSTURE
 
 At machine speed and civilisational scale, fail-closed
 systems create cascading failure modes that are worse
@@ -169,10 +177,12 @@ restrictions to every dependent system. Dependencies
 lock. Workflows halt. Human intervention cannot scale
 to the volume of locked states.
 
-Fail-open systems degrade gracefully. Each failure
-returns authority to the local human party. The failure
-is contained. It does not propagate. The system becomes
-less automated on failure — not more restrictive.
+I6-conforming systems degrade gracefully. Gate failure
+produces Evaluation-Unavailable DENY with disclosed
+cause and retry path. Constraint violation produces
+Transparent Denial with disclosed governing rule.
+In both cases, authority returns to the human party.
+The failure is contained. It does not propagate.
 
 This is the only failure posture that scales across
 distributed systems operating at machine speed with
@@ -188,6 +198,7 @@ This document depends on:
 - kernel/INVARIANTS.md
 - primitives/fail-open.md
 - core/512-kernel/512-overview.md
+- core/FAIL_OPEN_RESOLUTION.md
 
 This document is related to:
 - papers/001-minimal-constraint-layer.md
